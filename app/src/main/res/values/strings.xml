@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RegisterAndLoginUI</string>
+    <string name="sign_in">Sign In</string>
+    <string name="enter_email">Enter email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="not_have_account">"Haven\'t account? "</string>
+    <string name="done_login">Done login</string>
+    <string name="short_password_minimum_8_characters">Short password minimum 8 characters</string>
+    <string name="enter_valid_email">Enter valid email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="phone">Phone</string>
+    <string name="enter_phone">Enter phone</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="already_have_account">"Already have account? "</string>
+    <string name="done_register">Done register</string>
+    <string name="confirm_password_not_equal_password">Confirm password not equal password</string>
+</resources>
