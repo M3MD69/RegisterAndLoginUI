@@ -1,4 +1,3 @@
-# واجهة تسجيل مسخدم جديد و مستخدم حالي باستخدام (Jetpack Compose)
 ## Login and Register Pages (Arabic)
 
 <div style="display: flex; justify-content: space-between;">
