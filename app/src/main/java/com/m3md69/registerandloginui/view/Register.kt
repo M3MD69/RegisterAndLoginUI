@@ -1,6 +1,7 @@
 package com.m3md69.registerandloginui.view
 
 import android.content.Context
+import android.net.ConnectivityManager
 import android.util.Patterns
 import android.widget.Toast
 import androidx.compose.foundation.Image
@@ -47,6 +48,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.m3md69.registerandloginui.MainActivity
 import com.m3md69.registerandloginui.R
 
 @Composable
@@ -410,7 +412,7 @@ fun RegisterPage(navController: NavController) {
                     fontSize = 16.sp
                 )
                 Text(
-                    modifier = Modifier.clickable(onClick = { navController.navigate(route = "RegisterPage") }),
+                    modifier = Modifier.clickable(onClick = { navController.navigate(route = MainActivity.LOGIN_PAGE) }),
                     text = stringResource(R.string.register),
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
@@ -489,11 +491,16 @@ private fun validData(
         confirmPasswordError.value = null
     }
 
-    if (
-        validName &&
-        validPhone &&
-        validEmail &&
-        validPassword &&
-        validConfirmPassword
-    ) Toast.makeText(context, context.getString(R.string.done_register), Toast.LENGTH_SHORT).show()
+    val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val isConnected = connectivityManager.activeNetworkInfo?.isConnectedOrConnecting == true
+
+    if (isConnected) {
+        if (
+            validName &&
+            validPhone &&
+            validEmail &&
+            validPassword &&
+            validConfirmPassword
+        ) Toast.makeText(context, context.getString(R.string.done_register), Toast.LENGTH_SHORT).show()
+    } else Toast.makeText(context, context.getString(R.string.you_are_not_connected_to_the_internet), Toast.LENGTH_SHORT).show()
 }

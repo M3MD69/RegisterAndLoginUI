@@ -21,4 +21,5 @@
     <string name="already_have_account">"Already have account? "</string>
     <string name="done_register">Done register</string>
     <string name="confirm_password_not_equal_password">Confirm password not equal password</string>
+    <string name="you_are_not_connected_to_the_internet">You are not connected to the Internet</string>
 </resources>

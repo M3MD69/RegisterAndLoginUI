@@ -11,6 +11,12 @@ import com.m3md69.registerandloginui.view.LoginPage
 import com.m3md69.registerandloginui.view.RegisterPage
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+        const val LOGIN_PAGE = "LoginPage"
+        const val REGISTER_PAGE = "RegisterPage"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { NavigatePage() }
@@ -22,9 +28,9 @@ private fun NavigatePage() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "LoginPage"
+        startDestination = MainActivity.LOGIN_PAGE
     ) {
-        composable(route = "LoginPage", content = { LoginPage(navController = navController) })
-        composable(route = "RegisterPage", content = { RegisterPage(navController = navController) })
+        composable(route = MainActivity.LOGIN_PAGE, content = { LoginPage(navController = navController) })
+        composable(route = MainActivity.REGISTER_PAGE, content = { RegisterPage(navController = navController) })
     }
 }

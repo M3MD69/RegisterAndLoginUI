@@ -47,6 +47,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.m3md69.registerandloginui.MainActivity
 import com.m3md69.registerandloginui.R
 
 @Composable
@@ -217,7 +218,7 @@ fun LoginPage(navController: NavController) {
             Row {
                 Text(text = stringResource(R.string.not_have_account), fontSize = 16.sp)
                 Text(
-                    modifier = Modifier.clickable(onClick = { navController.navigate(route = "RegisterPage") }),
+                    modifier = Modifier.clickable(onClick = { navController.navigate(route = MainActivity.REGISTER_PAGE) }),
                     text = stringResource(R.string.register),
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
