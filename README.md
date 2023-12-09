@@ -9,5 +9,5 @@
 ## Login and Register Pages (English)
 <div style="display: flex; justify-content: space-between;">
     <img src="LoginPage-English.png" alt="Login Page English" width="250"/>
-    <img src="RegisterPage-English.png" alt="Register Page English" width="250"/>
+    <img src="RegisterPage-Engilsh.png" alt="Register Page English" width="250"/>
 </div>
